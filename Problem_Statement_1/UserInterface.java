@@ -135,6 +135,7 @@ public class UserInterface extends JFrame implements ActionListener, MouseListen
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==newWindow){
             new level2();
+            newWindow.setEnabled(false);
             dispose();
         }
         if(e.getSource()==level3){

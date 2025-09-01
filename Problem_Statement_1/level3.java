@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class level3 extends JFrame{
+    JLabel label;
     public level3(){
         setTitle("Level 3");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -10,8 +11,13 @@ public class level3 extends JFrame{
         setResizable(false);
         setLocationRelativeTo(null);
 
-
-
+        label = new JLabel();
+        label.setText("yet to set level3");
+        label.setFont(new Font("Arial", Font.BOLD,18));
+        label.setHorizontalAlignment(JLabel.CENTER);
+        
+        
+        add(label);
         setVisible(true);
     }
 }

@@ -91,6 +91,7 @@ public class level2 extends JFrame implements ActionListener {
         panel4.add(decode);
         panel4.add(next);
         panel4.add(exit);
+        
         add(panel1);
         add(panel2);
         setVisible(true);
