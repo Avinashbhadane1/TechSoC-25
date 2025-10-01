@@ -145,23 +145,32 @@ public class mainUserInterface extends JFrame implements MouseListener, ActionLi
         setIconImage(img);
 
         id.add(articuno.getId());id.add(blastoise.getId());id.add(butterfree.getId());id.add(charizard.getId());
-        id.add(gengar.getId());id.add(lugia.getId());id.add(mega_mewtwo_x.getId());id.add(pikachu.getId());id.add(alakazam.getId())
-;        imagePath.add("/Images/articuno.png");imagePath.add("/Images/blastoise.png");imagePath.add("/Images/butterfree.png");imagePath.add("/Images/charizard.png");
+        id.add(gengar.getId());id.add(lugia.getId());id.add(mega_mewtwo_x.getId());id.add(pikachu.getId());id.add(alakazam.getId());   
+
+        imagePath.add("/Images/articuno.png");imagePath.add("/Images/blastoise.png");imagePath.add("/Images/butterfree.png");imagePath.add("/Images/charizard.png");
         imagePath.add("/Images/gengar.png");imagePath.add("/Images/lugia.png");imagePath.add("/Images/mega_mewtwo_x.png");imagePath.add("/Images/pikachu.png");imagePath.add("/Images/alakazam.png");
+
         types.add(articuno.getType());types.add(blastoise.getType());types.add(butterfree.getType());types.add(charizard.getType());
         types.add(gengar.getType());types.add(lugia.getType());types.add(mega_mewtwo_x.getType());types.add(pikachu.getType());types.add(alakazam.getType());
+
         names.add(articuno.getName());names.add(blastoise.getName());names.add(butterfree.getName());names.add(charizard.getName());
-        names.add(gengar.getName());names.add(lugia.getName());names.add(mega_mewtwo_x.getName());names.add(pikachu.getName());names.add(alakazam.getName())
-;        health.add(articuno.getHp());health.add(blastoise.getHp());health.add(butterfree.getHp());health.add(charizard.getHp());
+        names.add(gengar.getName());names.add(lugia.getName());names.add(mega_mewtwo_x.getName());names.add(pikachu.getName());names.add(alakazam.getName());    
+
+        health.add(articuno.getHp());health.add(blastoise.getHp());health.add(butterfree.getHp());health.add(charizard.getHp());
         health.add(gengar.getHp());health.add(lugia.getHp());health.add(mega_mewtwo_x.getHp());health.add(pikachu.getHp());health.add(alakazam.getHp());
+
         attack.add(articuno.getAttackPower());attack.add(blastoise.getAttackPower());attack.add(butterfree.getAttackPower());attack.add(charizard.getAttackPower());
         attack.add(gengar.getAttackPower());attack.add(lugia.getAttackPower());attack.add(mega_mewtwo_x.getAttackPower());attack.add(pikachu.getAttackPower());attack.add(alakazam.getAttackPower());
+
         defence.add(articuno.getDefencePower());defence.add(blastoise.getDefencePower());defence.add(butterfree.getDefencePower());defence.add(charizard.getDefencePower());
         defence.add(gengar.getDefencePower()); defence.add(lugia.getDefencePower());defence.add(mega_mewtwo_x.getDefencePower());defence.add(pikachu.getDefencePower());defence.add(alakazam.getDefencePower());
+
         speed.add(articuno.getSpeed());speed.add(blastoise.getSpeed());speed.add(butterfree.getSpeed());speed.add(charizard.getSpeed());
         speed.add(gengar.getSpeed());speed.add(lugia.getSpeed());speed.add(mega_mewtwo_x.getSpeed());speed.add(pikachu.getSpeed());speed.add(alakazam.getSpeed());
+
         Move.addAll(articuno.getMoves());Move.addAll(blastoise.getMoves());Move.addAll(butterfree.getMoves());Move.addAll(charizard.getMoves());
         Move.addAll(gengar.getMoves());Move.addAll(lugia.getMoves());Move.addAll(mega_mewtwo_x.getMoves());Move.addAll(pikachu.getMoves());Move.addAll(alakazam.getMoves());
+
 
         panel1 = new JPanel();
         panel1.setLayout(new GridLayout(4,4));
@@ -191,8 +200,10 @@ public class mainUserInterface extends JFrame implements MouseListener, ActionLi
         sub1 = setter(nameDisplayer0,nameDisplayer1,10,8,34,15);sub2 = setter(typeDisplayer0,typeDisplayer1,10,8,34,15);
         sub3 = setter(hpDisplayer0,hpDisplayer1,10,8,34,15);sub4 = setter(attackDisplayer0,attackDisplayer1,10,8,34,15);
         sub5 = setter(defenceDisplayer0,defenceDisplayer1,10,8,34,15);sub6 = setter(speedDisplayer0,speedDisplayer1,10,8,34,15);
+
         sub7 = setter(move1,moveDamage1,8,6,20,15);sub8 = setter(move2,moveDamage2,8,6,20,15);
         sub9 = setter(move3,moveDamage3,8,6,20,15);sub10 = setter(move4,moveDamage4,8,6,20,15);
+        
         sub11 = new JPanel(new FlowLayout(FlowLayout.CENTER,20,50));
         sub11.setBackground(Color.BLACK);sub11.add(change);
         sub12 = new JPanel(new FlowLayout(FlowLayout.CENTER,20,50));

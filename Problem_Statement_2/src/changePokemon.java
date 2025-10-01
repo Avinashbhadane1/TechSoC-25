@@ -75,6 +75,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
             imageLabel.setIcon(new ImageIcon(image));
             imageLabel.setHorizontalAlignment(JLabel.CENTER);
         }else{
+            imageLabel.setIcon(null);
             imageLabel.setHorizontalAlignment(JLabel.CENTER);
             imageLabel.setVerticalAlignment(JLabel.CENTER);
             imageLabel.setText(names.get(iid));
