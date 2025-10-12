@@ -69,17 +69,10 @@ public class changePokemon extends JDialog implements ActionListener,data {
         moveDamage3.setText("Deals a damage of " + Move.get((iid*4)+2).getValue());
         moveDamage4.setText("Deals a damage of " + Move.get((iid*4)+3).getValue());
         imageLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-        if(!(imagePath.get(iid)=="None")){
-            ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource(imagePath.get(iid))));
-            Image image = icon.getImage().getScaledInstance(200, 170, Image.SCALE_SMOOTH);
-            imageLabel.setIcon(new ImageIcon(image));
-            imageLabel.setHorizontalAlignment(JLabel.CENTER);
-        }else{
-            imageLabel.setIcon(null);
-            imageLabel.setHorizontalAlignment(JLabel.CENTER);
-            imageLabel.setVerticalAlignment(JLabel.CENTER);
-            imageLabel.setText(names.get(iid));
-        }
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource(imagePath.get(iid))));
+        Image image = icon.getImage().getScaledInstance(200, 170, Image.SCALE_SMOOTH);
+        imageLabel.setIcon(new ImageIcon(image));
+        imageLabel.setHorizontalAlignment(JLabel.CENTER);
     }
     changePokemon(int id, ArrayList<Integer> idUnavailable){
         setTitle("Changing Pokemon");
@@ -90,7 +83,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
         setModal(true);
         setFocusable(false);
         setResizable(false);
-        
+
         p1.setLayout(new GridLayout(1,1));
         imageLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource(imagePath.get(id))));
@@ -98,7 +91,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
         imageLabel.setIcon(new ImageIcon(image));
         imageLabel.setHorizontalAlignment(JLabel.CENTER);
         p1.add(imageLabel);
-        
+
         p2.setLayout(new FlowLayout());
         ArrayList<String> tempNames = new ArrayList<>(names);
         for (Integer integer : idUnavailable) {
@@ -130,7 +123,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
         p6.add(sub7);p6.add(sub8);p6.add(sub9);p6.add(sub10);
         p3.add(p5);
         p3.add(p6);
-        
+
         load.setHorizontalAlignment(JButton.CENTER);
         load.setVerticalAlignment(JButton.CENTER);
         load.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
@@ -139,7 +132,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
         load.setFocusable(false);
         load.setFont(new Font("Arial",Font.BOLD,34));
         load.addActionListener(this);
-        
+
         select.setHorizontalAlignment(JButton.CENTER);
         select.setVerticalAlignment(JButton.CENTER);
         select.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
@@ -148,7 +141,7 @@ public class changePokemon extends JDialog implements ActionListener,data {
         select.setFocusable(false);
         select.setFont(new Font("Arial",Font.BOLD,34));
         select.addActionListener(this);
-        
+
         p7.setAlignmentX(JPanel.CENTER_ALIGNMENT);
         p7.setAlignmentY(JPanel.CENTER_ALIGNMENT);
         p7.add(load);

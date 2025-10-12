@@ -20,7 +20,7 @@ public class PokemonDialog extends JDialog implements data{
     }
 
     private int difficulty;//0,1,2 for easy medium and hard
-private int idSelected;
+    private int idSelected;
     public PokemonDialog(Frame parent) {
         super(parent, "Choose Pokémon for Opponent", true); // modal dialog
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);

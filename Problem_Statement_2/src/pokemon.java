@@ -15,7 +15,7 @@ class pokemon{
     private ArrayList<Map.Entry<String,Integer>> moves = new ArrayList<>();
     public JLabel pokemonSetter(JLabel label,String ImagePath,String name){
         label.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource(ImagePath)));
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(ImagePath));
         icon.setDescription(ImagePath);
         label.setIcon(icon);
         Image image = icon.getImage().getScaledInstance(200, 170, Image.SCALE_SMOOTH);
@@ -29,21 +29,21 @@ class pokemon{
         ArrayList<Map.Entry<String,Integer>> arrayList  = new ArrayList<>();
         File file = new File(path);
         try(BufferedReader br = new BufferedReader(new FileReader(file))) {
-           p.setId(Integer.parseInt(br.readLine()));
-           p.setName(br.readLine());
-           p.setType(br.readLine());
-           p.setHp(Integer.parseInt(br.readLine()));
-           p.setAttackPower(Integer.parseInt(br.readLine()));
-           p.setDefencePower(Integer.parseInt(br.readLine()));
-           p.setSpeed(Integer.parseInt(br.readLine()));
-           String moveName;
-           while ((moveName = br.readLine()) != null) {
+            p.setId(Integer.parseInt(br.readLine()));
+            p.setName(br.readLine());
+            p.setType(br.readLine());
+            p.setHp(Integer.parseInt(br.readLine()));
+            p.setAttackPower(Integer.parseInt(br.readLine()));
+            p.setDefencePower(Integer.parseInt(br.readLine()));
+            p.setSpeed(Integer.parseInt(br.readLine()));
+            String moveName;
+            while ((moveName = br.readLine()) != null) {
                 String valueLine = br.readLine();
                 if (valueLine == null) break; // avoid odd leftover
                 int value = Integer.parseInt(valueLine);
                 arrayList.add(new AbstractMap.SimpleEntry<>(moveName, value));
-           }
-           p.setMoves(arrayList);
+            }
+            p.setMoves(arrayList);
         } catch (Exception e){e.printStackTrace();}
         return p;
     }

@@ -122,7 +122,7 @@ public class addingPokemon extends JDialog implements ActionListener, data {
                 int defenceVal = Integer.parseInt(defenceField.getText().trim());
                 int speedVal = Integer.parseInt(speedField.getText().trim());
 
-                paths.add("src\\Pokemon\\" + name);
+                paths.add("C:\\Users\\HP\\IdeaProjects\\PS2\\src\\Pokemon\\" + name);
                 names.add(name);
                 types.add(type);
                 health.add(hp);
