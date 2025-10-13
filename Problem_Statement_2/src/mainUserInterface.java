@@ -295,7 +295,7 @@ public class mainUserInterface extends JFrame implements MouseListener, ActionLi
         }
         if(e.getSource()==battle){
             PokemonDialog opponentPokemon = new PokemonDialog(this);
-            System.out.println(opponentPokemon.getDifficulty());
+            new BattleMenu(this, onDisplay , opponentPokemon.getIdSelected(), opponentPokemon.getDifficulty());
         }
         if(e.getSource()==exitForSure){
             System.exit(0);
